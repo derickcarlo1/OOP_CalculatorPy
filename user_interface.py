@@ -51,7 +51,43 @@ class UserInterface:
                 # Handle the case when the user enters an invalid operation
                 self.display_error("Invalid operation. Please choose from +, -, *, /")
 
+    def run_calculator(self):
+        while True:
+            try:
+                # Get the first number from the user
+                num1 = self.get_number_input(f"{GREEN}Enter the first number: {RESET}")
+                # Get the second number from the user
+                num2 = self.get_number_input(f"{GREEN}Enter the second number: {RESET}")
+                # Get the operation from the user
+                operation = self.get_operation_input()
+
+                # Perform the calculation based on the chosen operation
+                if operation == "+":
+                    result = self.calculator.add(num1, num2)
+                elif operation == "-":
+                    result = self.calculator.subtract(num1, num2)
+                elif operation == "*":
+                    result = self.calculator.multiply(num1, num2)
+                elif operation == "/":
+                    result = self.calculator.divide(num1, num2)
+
+                # Display the result of the calculation
+                self.display_result(result)
+            except ZeroDivisionError:
+                # Handle the case when the user tries to divide by zero
+                self.display_error("Cannot divide by zero")
+
+            # Ask the user if they want to try again
+            choice = input(f"{GREEN}Do you want to try again? (y/n): {RESET}")
+            if choice.lower() == "n":
+                # Display ASCII art for "Thank you!" and exit the loop
+                print(pyfiglet.figlet_format("Thank you!"))
+                break
+            elif choice.lower() != "y":
+                # Handle the case when the user enters an invalid choice
+                self.display_error("Invalid input. Please enter either 'y' or 'n'")
 
 # Create an instance of the UserInterface class
-
+ui = UserInterface()
 # Run the calculator using the user interface
+ui.run_calculator()
