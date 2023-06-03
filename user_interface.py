@@ -1,5 +1,6 @@
 # Import the Calculator class from functions_cal.py file
 from functions_cal import Calculator
+from calupdatebyderick import updatedcalbyderick
 
 # Import pyfiglet for ASCII art text
 import pyfiglet
@@ -15,7 +16,7 @@ RESET = "\033[0m"
 class UserInterface:
     def __init__(self):
         # Initialize an instance of the Calculator class
-        self.calculator = Calculator()
+        self.calculator = updatedcalbyderick()
 
     def display_result(self, result):
         # Display ASCII art for "Result"
