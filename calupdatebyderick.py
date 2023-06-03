@@ -6,3 +6,7 @@ class updatedcalbyderick(Calculator):
     # Override the multiply method from the Calculator class
     def multiply(self, num1, num2):
         return num1 ** num2  # Calculate exponentiation instead of multiplication
+
+    # Cube function
+    def cube(self, num):
+        return num ** 3
