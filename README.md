@@ -1,5 +1,5 @@
 # 🖩 OOP Calculator 🖩
-This repository contains an object-oriented programming (OOP) calculator implemented in Python. The calculator allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
+This repository contains an object-oriented programming (OOP) calculator implemented in Python. The calculator allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, division and even to cube a number!
 
 ## How to Run 👈
 ### To run the calculator in your preferred IDE or Visual Studio Code, follow these steps:
@@ -18,7 +18,7 @@ This repository contains an object-oriented programming (OOP) calculator impleme
 I created this calculator program to demonstrate the principles of object-oriented programming in Python. By implementing the calculator using classes and objects, it becomes modular and extensible, allowing for easy addition of new operations in the future.
 
 ## Features 🤖
--Supports four basic arithmetic operations: addition, subtraction, multiplication, and division.
+-Supports four basic arithmetic operations: addition, subtraction, multiplication, division and cube function.
 -Uses the operator module from Python's standard library for performing the calculations.
 -Utilizes a user interface class to handle user input, display results, and error messages.
 -Implements error handling for invalid input and division by zero.
