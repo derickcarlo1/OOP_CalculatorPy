@@ -44,7 +44,7 @@ class UserInterface:
     def get_operation_input(self):
         while True:
             # Ask the user to choose an operation
-            operation = input(f"{GREEN}Choose an operation (+, -, *, /, ^): {RESET}")
+            operation = input(f"{GREEN}Choose an operation (+, -, *, /, ^){RESET} {BLUE}Kindly reminder- if you chose cube operation (^), the number that will be cubed is only the first number you entered, regardless what you input in 2nd number: {RESET}")
             if operation in ["+", "-", "*", "/", "^"]:
                 # Return the valid operation
                 return operation
