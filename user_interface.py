@@ -44,13 +44,13 @@ class UserInterface:
     def get_operation_input(self):
         while True:
             # Ask the user to choose an operation
-            operation = input(f"{GREEN}Choose an operation (+, -, *, /): {RESET}")
-            if operation in ["+", "-", "*", "/"]:
+            operation = input(f"{GREEN}Choose an operation (+, -, *, /, ^): {RESET}")
+            if operation in ["+", "-", "*", "/", "^"]:
                 # Return the valid operation
                 return operation
             else:
                 # Handle the case when the user enters an invalid operation
-                self.display_error("Invalid operation. Please choose from +, -, *, /")
+                self.display_error("Invalid operation. Please choose from +, -, *, /, ^")
 
     def run_calculator(self):
         while True:
@@ -71,6 +71,9 @@ class UserInterface:
                     result = self.calculator.multiply(num1, num2)
                 elif operation == "/":
                     result = self.calculator.divide(num1, num2)
+                elif operation == "^":
+                    result = self.calculator.cube(num1)
+
 
                 # Display the result of the calculation
                 self.display_result(result)
